@@ -1,7 +1,5 @@
 # Coordinates.py
-#
-# @ author: Anthony. Danial
-# date: November 2018
+
 
 #Prints players hit or miss grid
 class ShotLocation:
