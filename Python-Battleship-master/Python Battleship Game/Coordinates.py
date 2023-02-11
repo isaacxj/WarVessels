@@ -1,7 +1,5 @@
 # Coordinates.py
-#
-# @ author: Anthony. Danial
-# date: November 2018
+
 
 #Prints the coordinate grid to the player
 class Coordinates:

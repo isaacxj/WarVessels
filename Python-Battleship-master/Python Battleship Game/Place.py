@@ -1,7 +1,5 @@
 # Place.py
-#
-# @ author: Anthony. Danial
-# date: November 2018
+
 
 #Depending on orientation, places the ship on designated players grid either 3 to the right or 3 down
 class Place:

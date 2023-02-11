@@ -28,7 +28,7 @@ After choosing your grid size you will be asked to input commands, The command l
 place *orientation(h - horizontal/v - vertical),x_coordinate,y_coordinate* --- places a 3 long ship either vertically or horizontally at the given x y coordinates e.g    place h,0,0\n\
 show ships --- shows your grid with ship placements 0 means empty and 1 is your ship location\n\
 show coordinates --- shows the grid coordinates\n\
-exit battleships --- exits the game\n\n\
+exit warvessels --- exits the game\n\n\
 Now After both players have placed placed their ships the shoot commands are as follows\n\n\
 !!!During shooting phase!!!\n\
 shoot x_coordinate,y_coordinate --- shoots at the request x y coordinates e.g   shoot 0,0\n\
@@ -396,7 +396,7 @@ Typing (show coordinates) without any brackets will display the coordinate grid 
                 #Lower cases shoot_coordinates
                 shoot_coordinates.lower()
 
-                #If exit battleships is inputed then close/end game, else print invalid message
+                #If exit warvessels is inputed then close/end game, else print invalid message
                 if shoot_coordinates == "warvessels":
                     sys.exit()    
                 else:

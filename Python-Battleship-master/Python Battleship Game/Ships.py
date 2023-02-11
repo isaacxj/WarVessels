@@ -1,7 +1,5 @@
 # Coordinates.py
-#
-# @ author: Anthony. Danial
-# date: November 2018
+
 
 #Prints the player grid with the ships in it
 from Place import Place
