@@ -12,7 +12,7 @@ BG = pygame.color.Color('black')
 def get_font(size): # Returns Press-Start-2P in the desired size
     return pygame.font.Font("assets/font.ttf", size)
 
-def play():
+def playGame():
     while True:
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
 
@@ -51,7 +51,7 @@ def main_menu():
 
 
         PLAY_BUTTON = Button(image=None, pos=(640, 400),
-                            text_input="PLAY", font=get_font(75), base_color="#2DD212", hovering_color="White")
+                            text_input="Start the War ->", font=get_font(64), base_color="#2DD212", hovering_color="White")
 
         QUIT_BUTTON = Button(image=None, pos=(640, 550),
                             text_input="QUIT", font=get_font(75), base_color="#2DD212", hovering_color="White")
@@ -68,7 +68,7 @@ def main_menu():
                 sys.exit()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if PLAY_BUTTON.checkForInput(MENU_MOUSE_POS):
-                    play()
+                    playGame()
                 if QUIT_BUTTON.checkForInput(MENU_MOUSE_POS):
                     pygame.quit()
                     sys.exit()
