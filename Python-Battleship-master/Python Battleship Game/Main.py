@@ -1,9 +1,7 @@
 # Place.py
-#
-# @ author: Anthony. Danial
-# date: November 2018
+
 import random
-#Import needed as a method to exit the program
+
 import sys
 
 #Import Documents
@@ -15,10 +13,13 @@ from ShotLocation import ShotLocation
 
 
 #Welcome message with instructions
-print("Welcome to Battleships, a game about strategical placement and shot selection \n\
+print("Welcome to WarVessels, a pass-and-play terminal game designed for OEC 2023! \n\
+This game is based on the popular boardgame Battleship, but with some fun twists! \n\
 You will be first asked to enter how big you want the grid size to be, between the sizes 5 x 5 to 10 x 10 \n\
 You will be give 5 ships each taking 3 squares in a straight line \n\
-Player 1 will place down 5 of their ships first then player 2 \n\
+Player 1 will place down 5 of their ships first, then player 2 \n\
+To begin your turn you will roll a dice which decides whether your missiles misfire. \n\
+If you roll a 1 or a 2 - you will get no missiles that turn. :( \n\
 Then after you will each take turn shoot at certain location of the grid to try and hit your opponents ships \n\
 Hitting an opponents ship grants you another turn and missing will skip your turn \n\
 The aim of the game is to try and shoot down all of your opponents ships \n\
@@ -33,7 +34,7 @@ Now After both players have placed placed their ships the shoot commands are as 
 shoot x_coordinate,y_coordinate --- shoots at the request x y coordinates e.g   shoot 0,0\n\
 show shots --- shows your shots in grid form where 0 means empty H means hit and X means miss\n\
 show coordinates --- shows the grid coordinates\n\
-exit battleships\n\n\
+exit warvessels\n\n\
 Enjoy and have fun sinking each others ships\n")
 
 
@@ -67,16 +68,16 @@ coordinate_map = Coordinates()
 #Asking the user to input grid size 
 while loop:
     try:
-        user_input = input("Please enter a number for the size of the grid between 5 and 10 ")
+        user_input = input("Please enter a number for the size of the grid between 8 and 10 ")
         user_input = user_input.lower()
-        if user_input == "exit battleships":
+        if user_input == "exit warvessels":
             sys.exit()
         grid_size = int(user_input)
-        if grid_size >= 5 and grid_size <= 10:
+        if grid_size >= 8 and grid_size <= 10:
             break
         
         else:
-            print("Input must be between 5 and 10 \n")
+            print("Input must be between 8 and 10 \n")
     except ValueError:
         print("Please input a valid Integer \n")
         
@@ -111,7 +112,7 @@ while loop:
         
         #If exit is inputed
         if command == "exit":
-            if variable == "battleships":
+            if variable == "warvessels":
                 sys.exit()
             else:
                 print("Invalid exit command, Please input a valid exit command\n")
@@ -204,7 +205,11 @@ while loop:
 number_of_ships = 5
 
 
-#Clearing the game board, only way to clear the board from my research is to print a while lot of new lines to hide the previous text
+#Clearing the game board so users cannot see each others boards
+print("\n" * 100)
+print("\n" * 100)
+print("\n" * 100)
+print("\n" * 100)
 print("\n" * 100)
 
 print("Player 1 has placed all their ships\n")
@@ -224,7 +229,7 @@ while loop:
         
         #If exit is inputed
         if command == "exit":
-            if variable == "battleships":
+            if variable == "warvessels":
                 sys.exit()
             else:
                 print("Invalid exit command, Please input a valid exit command\n")
@@ -302,11 +307,16 @@ while loop:
         print("Invalid command, Please input a valid command\n")
 
 
-#Clearing the game board, only way to clear the board from my research is to print a while lot of new lines to hide the previous text
+#Clearing the game board so users cannot see each others boards
+print("\n" * 100)
+print("\n" * 100)
+print("\n" * 100)
+print("\n" * 100)
 print("\n" * 100)
 
 print("Player 2 has placed all their ships\n")
-print("Both Players have placed their ships. Each player will now take turns to shoot down each others ships, if you hit a ship you get to shoot again")
+print("Both Players have placed their ships. TIME FOR WAR!!! ")
+print("Each player will now take turns to shoot down each others ships, if you hit a ship you get to shoot again")
 print("The command to fire at the desired location is shoot(x coordinate, y coordinate) i.e shoot(5,8)\n")
 
 
@@ -350,7 +360,7 @@ Typing (show coordinates) without any brackets will display the coordinate grid 
                                 print("\n\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
                 Game Over\n\n\
     Player 1 sunk all Player 2's ships\n\n\
-                Player 1 Wins\n\
+                Player 1 Wins the war!\n\
     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
                                 loop_shoot = False
 
@@ -387,7 +397,7 @@ Typing (show coordinates) without any brackets will display the coordinate grid 
                 shoot_coordinates.lower()
 
                 #If exit battleships is inputed then close/end game, else print invalid message
-                if shoot_coordinates == "battleships":
+                if shoot_coordinates == "warvessels":
                     sys.exit()    
                 else:
                     print("Enter a valid exit command")
@@ -426,7 +436,7 @@ Typing (show coordinates) without any brackets will display the coordinate grid 
                             print("\n\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
             Game Over\n\n\
 Player 2 sunk all Player 1's ships\n\n\
-            Player 2 Wins\n\
+            Player 2 Wins the war!\n\
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
                             loop_shoot = False
                         
@@ -454,7 +464,7 @@ Player 2 sunk all Player 1's ships\n\n\
 
             if shoot_command == "exit":
                 shoot_coordinates.lower()
-                if shoot_coordinates == "battleships":
+                if shoot_coordinates == "warvessels":
                     sys.exit()
                 else:
                     print("Enter a valid exit command")

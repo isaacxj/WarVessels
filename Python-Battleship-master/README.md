@@ -1,7 +1,6 @@
-# Python-Battleship
-2 player python battleship game
-
-Make sure python of at least version 2.7 or higher is installed
+# WARVESSELS
+2 player python battleship game designed for OEC 2023
+Authors: Agamjot Aneja, Isaac Joseph, Vrushank Kekre, Andy Devarakonda
 
 The game is a text-based battleship game where you can play battle ships locally
 
@@ -9,7 +8,7 @@ Run the Main.py file to start the game
 
 ***Instructions***
 
-You will be first asked to enter how big you want the grid size to be, between the sizes 5 x 5 to 10 x 10
+You will be first asked to enter how big you want the grid size to be, between the sizes 8 x 8 to 10 x 10
 
 You will be give 5 ships each taking 3 squares in a straight line
 
@@ -31,7 +30,7 @@ show ships --- shows your grid with ship placements 0 means empty and 1 is your 
 
 show coordinates --- shows the grid coordinates
 
-exit battleships --- exits the game
+exit warvessels --- exits the game
 
 Now After both players have placed placed their ships the shoot commands are as follows
 
@@ -43,6 +42,6 @@ show shots --- shows your shots in grid form where 0 means empty H means hit and
 
 show coordinates --- shows the grid coordinates
 
-exit battleships --- exits the game
+exit warvessels --- exits the game
 
-Enjoy and have fun sinking each others ships
+All is fair in love and war, Let the battles begin!
